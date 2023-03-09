@@ -1,0 +1,41 @@
+<head>
+    <style>
+        table, th, td {
+            border: 2px solid;
+            border-collapse: collapse;
+            border-color: cornflowerblue;
+        }
+    </style>
+    <title>Funkcionalnost</title>
+</head>
+<body>
+<h1>{{client}}</h1>
+<table style="width:100%">
+    <tr>
+        <th>Funkcionalnost streznik</th>
+        <th>Opis</th>
+    </tr>
+    <tr>
+        <td>Avtentikacija uporabniško ime in geslo</td>
+        <td>Po vnosu uporabniškega imena in gesla bosta strežniška stran in baza podatkov preverila vnesene podatke.</td>
+    </tr>
+    <tr>
+        <td>Pridobivanje podatkov o naročeni terminov (pacientov) za uspešno prijavljeni specialist (zdravnik)</td>
+        <td>Po kvantifikaciji specialista se izpišejo vsi njegovi pacienti, ki so naročeni.</td>
+    </tr>
+    <tr>
+        <td>Iskanje pacientov iz podatkovne baze</td>
+        <td>Podatke o pacientih prejemamo preko imena, priimka, številke socialnega zavarovanja ali napotnice.</td>
+    </tr>
+    <tr>
+        <td>Iskanje po datum iz podatkovne baze</td>
+        <td>Po vnosu datuma prejmemo podatke iz baze za razpisane termine na vneseni datum.</td>
+    </tr>
+    <tr>
+        <td>Vrnitev podatkov iz pregledanih pacientov</td>
+        <td>Ko specialist označi bolnika kot videnega, bo bolnik posodobljen, kot je viden v bazi podatkov. Te podatke pridobimo in prikažemo iz podatkovne baze.</td>
+    </tr>
+</table>
+<br/>
+<img src="images/useCaseDiagramServer.jpg" alt="Use Case Diagram">
+</body>
