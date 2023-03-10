@@ -1,1 +1,41 @@
+<head>
+    <style>
+        table, th, td {
+            border: 2px solid;
+            border-collapse: collapse;
+            border-color: cornflowerblue;
+        }
+    </style>
+    <title>Funkcionalnost odjemalec</title>
+</head>
+<body>
 <h1>{{client}}</h1>
+<table style="width:100%">
+    <tr>
+        <th>Funkcionalnost</th>
+        <th>Opis</th>
+    </tr>
+    <tr>
+        <td>Prijava</td>
+        <td>Uporabnik se registrira kot specialist, z določenim uporabniškim imenom in geslom. Po uspešni prijavi ga usmeri na Osnovno stran (Home page), kjer lahko vidi naslednje funkcionalnosti.</td>
+    </tr>
+    <tr>
+        <td>Pregled naročeni terminov (pacientov) za prijavljeni specialist (zdravnik)</td>
+        <td>Ko želi zdravnik videti, kateri termini so zanj rezervirani (torej katere paciente mora sprejeti), lahko klikne na možnost "Ogled terminov" in prikaže se mu seznam (tabela) pacientov za danes. Tabela vsebuje: ime, priimek, matično številko, št. napotnic, diagnozo, termin (dan in ura)</td>
+    </tr>
+    <tr>
+        <td>Iskanje pacientov</td>
+        <td>Zdravnik bo imel možnost iskanja pacientov po imenu, priimku, matični številki ali št. napotnici</td>
+    </tr>
+    <tr>
+        <td>Iskanje po datum</td>
+        <td>Zdravnik bo imel možnost iskanja pacientov po datumu. Natančneje, za izbrani termin bo lahko videl, kateri in koliko pacientov je naročenih.</td>
+    </tr>
+    <tr>
+        <td>Vodenje evidence pregledanih pacientov</td>
+        <td>Ko zdravnik konča s pregledom pacienta, ga bo imel možnost označiti kot "opravljeno/pregledano". Vsi pregledani pacienti se prenesejo na ločen seznam, kjer bo imel zdravnik jasen pregled, kateri pacienti so za danes zaključeni in kateri še niso.</td>
+    </tr>
+</table>
+<br/>
+<img src="images/useCaseDiagram.jpg" alt="Use Case Diagram">
+</body>

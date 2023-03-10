@@ -1,1 +1,56 @@
 <h1>{{rest}}</h1>
+<html>
+<body>
+
+<h2>REST</h2>
+
+<ul>
+    <li>GET
+        <ul>
+            <li>/getSpecialist/{id}</li>
+            <li>/getSpecialist/{name}</li>
+            <li>/getSpecialist/{surname}</li>
+            <li>/getSpecialist/{poklic}</li>
+            <li>/getAllSpecialist/{zdravstveniZavodId}</li>
+            <li>/getAllSpecialist</li>
+            <li>/getPacient/{id}</li>
+            <li>/getAllPatients</li>
+            <li>/getAllTermin</li>
+            <li>/getTerminByDate/{date}</li>
+            <li>/getTerminByPatientName/{name}</li>
+            <li>/getTerminByPatientSurname/{surname}</li>
+            <li>/getTerminByPatientEMSO/{emso}</li>
+            <li>/getTerminByPatientRefNum/{refNum}</li>
+        </ul>
+    </li>
+
+    <li>POST
+        <ul>
+            <li>/addTermin</li>
+            <li>/addPacient</li>
+            <li>/addSpecialist</li>
+            <li>/addZdravstvenZavod</li>
+            <li>/addPacientToListExamined</li>
+        </ul>
+    </li>
+    <li>PUT
+        <ul>
+            <li>/editTermin/{id]</li>
+            <li>/editPacient/{id]</li>
+            <li>/editSpecialist/{id]</li>
+            <li>/editZdravstvenZavod/{id]</li>
+        </ul>
+    </li>
+    <li>DELETE
+        <ul>
+            <li>/deletePacientByTermin/{id}/{termin}</li>
+            <li>/deleteTermin/{id}</li>
+            <li>/deletePacient/{id}</li>
+            <li>/deleteSpecialist/{id}</li>
+            <li>/deleteZdravstvenZavod/{id}</li>
+        </ul>
+    </li>
+</ul>
+
+</body>
+</html>

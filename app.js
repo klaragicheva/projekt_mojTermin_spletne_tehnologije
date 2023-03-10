@@ -3,11 +3,26 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
+var mongoose = require('mongoose');
 
 var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
+var pacientRouter = require('./routes/pacientRoutes');
+var specialistRouter = require('./routes/specialistRoutes');
+var terminRouter = require('./routes/terminRoutes');
+var zzRouter = require('./routes/zdravstveniZavodRoutes');
 
 var app = express();
+
+var mongoDB = ('mongodb+srv://st_mojtermin:123@cluster0.c4p4p6w.mongodb.net/?retryWrites=true&w=majority');
+
+mongoose.connect(mongoDB);
+mongoose.Promise = global.Promise;
+var db = mongoose.connection;
+
+db.on('error', console.error.bind(console, 'MongoDB connection error:'));
+db.once("open", function() {
+  console.log("Connected successfully");
+});
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -20,7 +35,10 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
-app.use('/users', usersRouter);
+app.use('/pacient', pacientRouter);
+app.use('/specialist', specialistRouter);
+app.use('/termin', terminRouter);
+app.use('/zdravstvenZavod', zzRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
